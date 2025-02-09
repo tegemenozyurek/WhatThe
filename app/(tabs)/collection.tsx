@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
+import React from 'react';
 
 export default function Collection() {
   return (
@@ -8,17 +9,6 @@ export default function Collection() {
         <View style={styles.header}>
           <Text style={styles.title}>Collection</Text>
           <Text style={styles.subtitle}>All your saved items in one place</Text>
-        </View>
-
-        {/* QR Codes Section */}
-        <View style={styles.section}>
-          <View style={styles.sectionHeader}>
-            <Text style={styles.sectionTitle}>QR Codes</Text>
-            <MaterialIcons name="qr-code" size={24} color="#FF6B6B" />
-          </View>
-          <View style={styles.itemPlaceholder}>
-            <Text style={styles.placeholderText}>Your scanned QR codes will appear here</Text>
-          </View>
         </View>
 
         {/* Translations Section */}

@@ -1,3 +1,4 @@
+import React from 'react';
 import { View, StyleSheet, ScrollView, Image, Text } from 'react-native';
 
 export default function Index() {
@@ -18,13 +19,6 @@ export default function Index() {
         <Text style={styles.featuresTitle}>Features ✨</Text>
         <View style={styles.featuresList}>
           <View style={styles.featureContainer}>
-            <Text style={styles.featureItem}>• Scan QR 📱</Text>
-            <Text style={styles.featureDescription}>
-              Securely scan any QR code. The scanned QR codes are listed in the collection, allowing you to revisit them anytime.
-            </Text>
-          </View>
-
-          <View style={styles.featureContainer}>
             <Text style={styles.featureItem}>• Translate 🌍</Text>
             <Text style={styles.featureDescription}>
               Translate text by typing or uploading a photo. You can also take a picture of an unknown language and have it translated instantly.
@@ -35,20 +29,6 @@ export default function Index() {
             <Text style={styles.featureItem}>• WhatThe..? 🤖</Text>
             <Text style={styles.featureDescription}>
               Encountered an unfamiliar object? Use the "What the..?" feature to identify and learn more about it.
-            </Text>
-          </View>
-
-          <View style={styles.featureContainer}>
-            <Text style={styles.featureItem}>• Collection 📚</Text>
-            <Text style={styles.featureDescription}>
-              All your QR scans, translations, and "What the..?" identifications are stored in the collection. You can access them anytime to review past actions.
-            </Text>
-          </View>
-
-          <View style={styles.featureContainer}>
-            <Text style={styles.featureItem}>• Subscription 💎</Text>
-            <Text style={styles.featureDescription}>
-              Soon...
             </Text>
           </View>
         </View>

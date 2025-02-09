@@ -1,12 +1,13 @@
 import { View, Text, StyleSheet, TouchableOpacity, TextInput } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
+import React from 'react';
 
 export default function Translate() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.title}>Translate</Text>
-        <Text style={styles.subtitle}>Type or take a photo to translate</Text>
+        <Text style={styles.subtitle}>Type or upload a photo to translate</Text>
       </View>
 
       <View style={styles.inputContainer}>
@@ -19,11 +20,6 @@ export default function Translate() {
       </View>
 
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button}>
-          <MaterialIcons name="camera-alt" size={24} color="white" />
-          <Text style={styles.buttonText}>Take Photo</Text>
-        </TouchableOpacity>
-
         <TouchableOpacity style={styles.button}>
           <MaterialIcons name="image" size={24} color="white" />
           <Text style={styles.buttonText}>Upload Image</Text>
@@ -58,7 +54,6 @@ export default function Translate() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
   },
   header: {
     alignItems: 'center',
@@ -68,27 +63,24 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     color: '#FF6B6B',
-    marginBottom: 8,
   },
   subtitle: {
     fontSize: 16,
     color: '#666',
   },
   inputContainer: {
-    marginBottom: 20,
+    padding: 20,
   },
   textInput: {
-    backgroundColor: '#f0f0f0',
-    borderRadius: 12,
-    padding: 15,
-    minHeight: 100,
-    fontSize: 16,
-    textAlignVertical: 'top',
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 8,
+    padding: 10,
   },
   buttonContainer: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    marginBottom: 20,
+    marginTop: 20,
   },
   button: {
     backgroundColor: '#FF6B6B',
@@ -96,7 +88,6 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: 20,
   },
   buttonText: {
     color: 'white',
@@ -111,7 +102,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '600',
     color: '#333',
-    marginBottom: 10,
   },
   translationPlaceholder: {
     backgroundColor: '#f0f0f0',
@@ -119,12 +109,12 @@ const styles = StyleSheet.create({
     padding: 20,
     alignItems: 'center',
     justifyContent: 'center',
-    minHeight: 100,
+    minHeight: 120,
   },
   placeholderText: {
     color: '#666',
     fontSize: 16,
-    marginTop: 10,
+    textAlign: 'center',
   },
   languageSelector: {
     flexDirection: 'row',
